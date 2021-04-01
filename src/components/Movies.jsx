@@ -131,25 +131,20 @@ class Movies extends Component {
             aria-label="Search"
             onChange={this.editSearchTerm}
           />
-          {/* {count === 0 ? (
-            <p>There are no movies in the database</p>
-          ) : ( */}
-          <>
-            <MoviesTable
-              movies={movies}
-              sortColumn={sortColumn}
-              onLike={this.handleLike}
-              onDelete={this.handleDelete}
-              onSort={this.handleSort}
-            />
-            <Pagination
-              itemsCount={totalCount}
-              pageSize={pageSize}
-              currentPage={currentPage}
-              onPageChange={this.handlePageChange}
-            />
-          </>
-          )}
+
+          <MoviesTable
+            movies={movies}
+            sortColumn={sortColumn}
+            onLike={this.handleLike}
+            onDelete={this.handleDelete}
+            onSort={this.handleSort}
+          />
+          <Pagination
+            itemsCount={totalCount}
+            pageSize={pageSize}
+            currentPage={currentPage}
+            onPageChange={this.handlePageChange}
+          />
         </div>
       </div>
     );
